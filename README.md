@@ -1,1 +1,3 @@
 # skull-haskell
+
+Haskell learning
