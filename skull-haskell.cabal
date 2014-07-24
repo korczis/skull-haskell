@@ -25,6 +25,8 @@ library
 
 executable HelloWorld
   main-is:             HelloWorld/HelloWorld.hs
+  build-depends:
+    skull-haskell
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >= 4 && <= 5
