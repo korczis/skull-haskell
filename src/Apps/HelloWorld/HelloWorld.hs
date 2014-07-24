@@ -1,5 +1,7 @@
 module Main where
 
+import Playground.Playground
+
 main :: IO()
 main = do
-  putStrLn "Hello World"
+	say "Hello World"

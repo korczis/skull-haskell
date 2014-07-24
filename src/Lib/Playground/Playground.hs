@@ -1,4 +1,4 @@
-module Playground.Playground where
+module Playground.Playground (cookieEater, say) where
 
 addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
 addVectors a b = (fst a + fst b, snd a + snd b)
@@ -80,3 +80,6 @@ nth x xs = if x - 1 == 0
 
 nthback :: Int -> [b] -> b
 nthback a xs = nth a (reverse xs)
+
+say :: String -> IO ()
+say x = putStrLn x
