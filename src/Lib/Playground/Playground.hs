@@ -1,10 +1,17 @@
-module Playground.Playground (cookieEater, say) where
+module Playground.Playground (bmiCalc, bmiJustTel, cookieEater, say) where
 
 addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
 addVectors a b = (fst a + fst b, snd a + snd b)
 
 bmiCalc :: (RealFloat a) => a -> a -> a
 bmiCalc weight height = weight / height ** 2
+
+bmiJustTel :: (RealFloat a) => a -> String
+bmiJustTel bmi
+	| bmi <= 18.5 = "You're underweight, you emo, you!"  
+	| bmi <= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"
+	| bmi <= 30.0    = "You're fat! Lose some weight, fatty!"
+	| otherwise     = "You're a whale, congratulations!"
 
 bmiTell1 :: (RealFloat a) => a -> a -> String  
 bmiTell1 weight height  

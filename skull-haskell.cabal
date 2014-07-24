@@ -21,6 +21,7 @@ library
   hs-source-dirs:   src/Lib
   exposed-modules:
     Algs.Algs
+    Cli.Cli
     Core.Core
     Math.Math
     Phys.Phys
@@ -28,8 +29,8 @@ library
   build-depends:
       base >= 4 && <= 5
 
-executable HelloWorld
-  main-is:             HelloWorld/HelloWorld.hs
+executable Bmi
+  main-is:             Bmi/Bmi.hs
   build-depends:
     skull-haskell
   -- other-modules:       
