@@ -1,4 +1,4 @@
-module Main where
+module Playground.Playground where
 
 addVectors :: (Num a) => (a, a) -> (a, a) -> (a, a)
 addVectors a b = (fst a + fst b, snd a + snd b)
@@ -12,13 +12,13 @@ applyTwice :: (a -> a) -> a -> a
 applyTwice f x = f ( f (x ))
 
 bmiCalc :: (RealFloat a) => a -> a -> a
-bmiCalc weight height = weight / height ^ 2
+bmiCalc weight height = weight / height ** 2
 
 bmiTell1 :: (RealFloat a) => a -> a -> String  
 bmiTell1 weight height  
-	| weight / height ^ 2 <= 18.5 = "You're underweight, you emo, you!"  
-	| weight / height ^ 2 <= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"  
-	| weight / height ^ 2 <= 30.0 = "You're fat! Lose some weight, fatty!"  
+	| weight / height ** 2 <= 18.5 = "You're underweight, you emo, you!"  
+	| weight / height ** 2 <= 25.0 = "You're supposedly normal. Pffft, I bet you're ugly!"  
+	| weight / height ** 2 <= 30.0 = "You're fat! Lose some weight, fatty!"  
 	| otherwise                 = "You're a whale, congratulations!"  
 
 bmiTell2 :: (RealFloat a) => a -> a -> String
@@ -64,7 +64,7 @@ charName 'a' = "Alan"
 charName 'b' = "Bob"
 charName 'c' = "Caroline"
 charName 'd' = "Don"
-charName x = "Bad luck"
+charName _ = "Bad luck"
 
 cookieEater :: String -> String
 cookieEater cookie
@@ -72,7 +72,7 @@ cookieEater cookie
 	| otherwise = "Not a cookie!"
 
 elem' :: (Eq a) => a -> [a] -> Bool
-elem' e [] = False
+elem' _ [] = False
 elem' e (x:xs) = if e == x then True else elem' e xs
 
 factorial :: (Integral a) => a -> a
@@ -82,7 +82,8 @@ factorial x = x * factorial (x - 1)
 factorialproduct :: (Integral a) => a -> a
 factorialproduct x = product [1..x]
 
-foldl' _ z _ = z
+foldl' :: (a -> a -> a) -> a -> [a] -> a
+foldl' _ z [] = z
 foldl' f z (x:xs) = let z' = z `f` x
                     in seq z' $ foldl' f z' xs
 
@@ -125,7 +126,6 @@ reverse' :: String -> String
 reverse' [] = []
 reverse' (x:xs) = reverse' xs ++ [x]
 
-
 sum' :: (Num a) => [a] -> a
 sum' [] = 0
 sum' (x:[]) = x
@@ -152,7 +152,3 @@ zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]
 zipWith' _ [] _ = []
 zipWith' _ _ [] = []
 zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys
-
-main :: IO()
-main = do
-  putStrLn "Hello World"
