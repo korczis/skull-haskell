@@ -24,6 +24,7 @@ library
     Cli.Cli
     Core.Core
     Math.Math
+    Net.Net
     Phys.Phys
     Playground.Playground
   build-depends:
@@ -35,6 +36,15 @@ executable Bmi
     skull-haskell
   -- other-modules:       
   -- other-extensions:    
+  build-depends:       base >= 4 && <= 5
+  ghc-options:         -Wall -Werror
+  hs-source-dirs:      src/Apps
+  default-language:    Haskell2010
+
+executable FastPing
+  main-is:             FastPing/FastPing.hs
+  build-depends:
+    skull-haskell
   build-depends:       base >= 4 && <= 5
   ghc-options:         -Wall -Werror
   hs-source-dirs:      src/Apps
