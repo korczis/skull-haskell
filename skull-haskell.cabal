@@ -20,6 +20,10 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:   src/Lib
   exposed-modules:
+    Algs.Algs
+    Core.Core
+    Math.Math
+    Phys.Phys
     Playground.Playground
   build-depends:
       base >= 4 && <= 5
