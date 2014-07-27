@@ -4,8 +4,8 @@ ghc:
   - 7.6
   - 7.8
 
-before_install:
-  - sudo ghc-pkg hide haskell98
+# before_install:
+#  - sudo ghc-pkg hide haskell98
 
 # NB: don't set `language: haskell` here
 
