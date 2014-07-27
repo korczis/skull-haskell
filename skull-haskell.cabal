@@ -25,11 +25,17 @@ library
     Core.Core
     Math.Math
     Net.Net
+    Net.WebServer
+    Parallel.Parallel
     Phys.Phys
     Playground.Playground
   build-depends:
-      base >= 4 && <= 5
-
+      base >= 4 && <= 5,
+      accelerate,
+      scotty
+  -- TODO: Add -WError
+  ghc-options:         -Wall -threaded
+  
 executable Bmi
   main-is:             Bmi/Bmi.hs
   build-depends:
@@ -37,7 +43,7 @@ executable Bmi
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >= 4 && <= 5
-  ghc-options:         -Wall -Werror
+  ghc-options:         -Wall
   hs-source-dirs:      src/Apps
   default-language:    Haskell2010
 
@@ -46,6 +52,6 @@ executable FastPing
   build-depends:
     skull-haskell
   build-depends:       base >= 4 && <= 5
-  ghc-options:         -Wall -Werror
+  ghc-options:         -Wall
   hs-source-dirs:      src/Apps
   default-language:    Haskell2010
