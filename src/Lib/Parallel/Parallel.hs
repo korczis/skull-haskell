@@ -30,6 +30,3 @@ testTuples = fromList (Z:.2:.3) (Prelude.zip [1..] ['a'..]) :: Array DIM2 (Int,C
 
 res :: Scalar Int
 res = Parallel.Parallel.run $ A.sum $ A.map (+1) (use testMatrix) 
-
-resGaus :: Scalar Int
-resGaus = Parallel.Parallel.run $ A.sum $ A.map (+1) (use testVector)
