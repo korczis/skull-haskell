@@ -6,4 +6,4 @@ import Playground.Playground
 
 main :: IO()
 main = do
-	say "This is FastPing " >> say (show allIps)
+	say "This is FastPing " -- >> say (show allIps)

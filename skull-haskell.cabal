@@ -30,12 +30,14 @@ library
     Phys.Phys
     Playground.Playground
   build-depends:
-      base >= 4 && <= 5,
-      accelerate,
-      scotty
+      base >= 4 && <= 5
+      , accelerate
+      -- , iproute
+      , scotty
   -- TODO: Add -WError
   ghc-options:         -Wall -threaded
-  
+  extensions: LambdaCase
+
 executable Bmi
   main-is:             Bmi/Bmi.hs
   build-depends:
