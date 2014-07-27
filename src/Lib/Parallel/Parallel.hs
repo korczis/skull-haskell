@@ -25,8 +25,8 @@ testVector = fromList (Z:.100) [1..100] :: Vector Int
 testMatrix :: Array DIM2 Int
 testMatrix = fromList (Z:.100:.100) [1..] :: Array DIM2 Int
 
-testTuples :: Array DIM2 (Int, Char)
-testTuples = fromList (Z:.2:.3) (Prelude.zip [1..] ['a'..]) :: Array DIM2 (Int,Char)
+-- testTuples :: Array DIM2 (Int, Char)
+-- testTuples = fromList (Z:.2:.3) (A.zip [1..] ['a'..]) :: Array DIM2 (Int,Char)
 
 res :: Scalar Int
 res = Parallel.Parallel.run $ A.sum $ A.map (+1) (use testMatrix) 
