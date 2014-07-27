@@ -1,19 +1,23 @@
 OUTPUT_DIR = bin
 
-all: bin cabal
+all: bin deps cabal
 
 bin:
 	mkdir -p $(OUTPUT_DIR)
 
-build:
+build: deps
 	cabal build
 	
-cabal: Setup.hs skull-haskell.cabal
+cabal: configure build
+
+configure: Setup.hs skull-haskell.cabal
 	cabal configure
-	cabal build
 
 clean:
 	cabal clean
+
+deps: skull-haskell.cabal
+	cabal install --only-dependencies
 
 .DEFAULT: all
 
