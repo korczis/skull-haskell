@@ -27,7 +27,7 @@ library
     Math.Math
     Net.Net
     Net.WebServer
-    Parallel.Parallel
+    Parallel.Accelerate
     Phys.Phys
     Playground.Playground
   build-depends:
