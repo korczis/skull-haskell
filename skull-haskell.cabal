@@ -28,6 +28,7 @@ library
     Net.Net
     Net.WebServer
     Parallel.Accelerate
+    Parallel.Repa
     Phys.Phys
     Playground.Playground
   build-depends:
