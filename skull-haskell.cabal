@@ -21,6 +21,7 @@ library
   default-language: Haskell2010
   hs-source-dirs:   src/Lib
   exposed-modules:
+    -- Lib
     Algs.Algs
     Cli.Cli
     Core.Core
@@ -31,23 +32,40 @@ library
     Parallel.Repa
     Phys.Phys
     Playground.Playground
+    -- Apps
+    App.Bmi
+    App.CookieEater
+    App.FastPing
   build-depends:
-      base >= 4 && <= 5
+      base >= 4.6 && <= 5
       , accelerate
+      -- , alex
+      -- , CV
+      -- , happy
       -- , iproute
       , parallel
       , repa
+      -- , repa-algorithms
+      -- , repa-devil
+      -- , repa-io
       , scotty
-  -- TODO: Add -WError
-  ghc-options:         -Wall -threaded
-  extensions: 
+  -- TODO: Add -Werror
+  ghc-options:         -Wall -threaded -O2
+  extensions: ScopedTypeVariables
 
 executable Bmi
   main-is:             Bmi/Bmi.hs
   build-depends:
-    skull-haskell
-  -- other-modules:       
-  -- other-extensions:    
+    skull-haskell 
+  build-depends:       base >= 4 && <= 5
+  ghc-options:         -Wall
+  hs-source-dirs:      src/Apps
+  default-language:    Haskell2010
+
+executable CookieEater
+  main-is:             CookieEater/CookieEater.hs
+  build-depends:
+    skull-haskell  
   build-depends:       base >= 4 && <= 5
   ghc-options:         -Wall
   hs-source-dirs:      src/Apps

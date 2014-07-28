@@ -1,6 +1,6 @@
 module Main where
 
-import qualified App.FastPing as App
+import qualified App.CookieEater as App
 
 main :: IO()
 main = App.run
