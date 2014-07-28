@@ -14,7 +14,7 @@ configure: Setup.hs skull-haskell.cabal
 	cabal configure
 
 clean:
-	cabal clean
+	# cabal clean
 
 deps: skull-haskell.cabal
 	cabal install --only-dependencies
