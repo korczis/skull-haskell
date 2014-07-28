@@ -1,7 +1,5 @@
 module Cli.Cli (listen, prompt, say)  where
 
-import Control.Monad
-
 listen :: IO String
 listen = getLine
 
