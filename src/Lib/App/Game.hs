@@ -1,16 +1,6 @@
 module App.Game where
 
-import qualified Cli.Cli as Cli
+import qualified App.CookieEater as CookieEater
 
-checkCookie :: String -> Bool
-checkCookie x = x == "cookie"
-
-ask :: IO ()
-ask = do
-	Cli.say "Give me a cookie"
-	cookie <- getLine
-	Cli.say $ show $ checkCookie cookie
-	
 run :: IO ()
-run = do
-	ask
+run = CookieEater.run
