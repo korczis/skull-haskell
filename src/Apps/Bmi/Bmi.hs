@@ -1,4 +1,4 @@
-module Bmi where
+module Main where
 
 import qualified App.Bmi as App
 

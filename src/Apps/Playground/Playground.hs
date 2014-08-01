@@ -1,4 +1,4 @@
-module Playground where
+module Main where
 
 import qualified App.Game as App
 

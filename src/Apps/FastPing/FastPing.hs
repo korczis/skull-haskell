@@ -1,4 +1,4 @@
-module FastPing where
+module Main where
 
 import qualified App.FastPing as App
 
