@@ -1,3 +1,5 @@
 # skull-haskell
 
-Haskell learning
+Learning materials for Haskell language
+
+See [skull](https://github.com/korczis/skull)
